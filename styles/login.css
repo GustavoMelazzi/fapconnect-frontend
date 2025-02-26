@@ -1,0 +1,118 @@
+
+/* Reset de margens e padding */
+* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+.fundo-cadastro{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    height: 1080px;
+    }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+    color: #333;
+    }
+
+.container_login {
+    max-width: 500px;
+    width: 350px;
+    padding: 25px;
+    background: #fff;
+    border: 1px solid #ccc;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+        
+    }
+      
+.fap_login {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin-left: 100px;
+    text-align: center;
+        
+    }
+
+.forgot-password {
+        text-align: center;
+        margin-top: 15px;
+    }
+      
+.forgot-password a {
+        color: #007AFF;
+        text-decoration: none;
+    }
+      
+.forgot-password a:hover {
+        text-decoration: none;
+    }
+
+.cadastro-link {
+        text-align: center;
+        margin-top: 15px;
+      }
+      
+.cadastro-link a {
+        color: #007AFF;
+        text-decoration: none;
+      }
+      
+.cadastro-link a:hover {
+        text-decoration: none;
+      }
+      
+.botao_entrar {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007BFF; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto no botão */
+    text-decoration: none; /* Remove o sublinhado do link */
+    border: none; /* Remove a borda do botão */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 16px; /* Tamanho da fonte */
+    text-align: center;
+    cursor: pointer; /* Muda o cursor para uma mão quando passa o mouse */
+    margin: 30px;
+    text-align: center;
+    margin-left: 107px;
+    transition: background 0.3s ease;
+    
+    }
+
+
+.botao_entrar:hover{
+    background: #0056b3;
+    text-decoration: none;
+        
+    }
+
+form {
+    display: flex;
+    flex-direction: column;
+    }
+      
+form label {
+    margin: 10px 0 5px;
+        font-size: 14px;
+    }
+    
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+outline: none;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+    
+    }

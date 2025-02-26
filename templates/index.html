@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>FAP Connect</title>
+  <link rel="stylesheet" href="../styles/registro.css">
+  <link rel="icon" type="image/x-icon" href="../assete/fapconnect.png">
+  
+
+
+</head>
+<body>
+  <div class="fundo_imagem">
+    <img src="../assete/fundo.jpg" class="fundo-cadastro" alt="">
+  </div>
+  
+  <div class="container_cadastro">
+    <div class="fap_imagem">
+      <img src="../assete/fapconnect.png" class="fap_cadastro" alt="fapconnect">
+    </div>
+    
+    
+    <form action="processa_registro.php" method="POST">
+      <label for="nome">Nome Completo</label>
+      <input type="text" id="nome" name="nome" placeholder="Nome completo" required> 
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="email" required> 
+      
+      <label for="cpf">CPF</label>
+      <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00"  maxlength="14" required> 
+      
+      <label for="curso">Curso</label>
+      <input type="text" id="curso" name="curso" placeholder="Curso" required> 
+
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required> 
+      
+      <label for="confirma_senha">Confirmar Senha</label>
+      <input type="password" id="confirma_senha" name="confirma_senha" placeholder="Confirme sua senha" required> 
+      
+      <button type="submit">Cadastre-se<a href="login.html"></a></button>
+    </form>
+    <div class="login-link">
+      <p>Tem uma conta? <a href="login.html">Conecte-se</a></p>
+    </div>
+  </div>
+<script src="../js/cpf.js"></script>
+</body>
+</html>

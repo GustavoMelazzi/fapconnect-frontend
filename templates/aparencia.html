@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>FAP Connect</title>
+  <link rel="stylesheet" href="../styles/aparencia.css">
+  <link rel="stylesheet" href="../styles/sidebar.css">
+  <link rel="stylesheet" href="../styles/chat.css">
+  <link rel="icon" type="image/x-icon" href="../assete/fapconnect.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+
+
+
+
+
+
+    <div id="sidebar-cfg"></div>
+<div id="sidebar-principal"></div>
+
+  <script>
+    // Carrega o arquivo cfg_barra.html na div "sidebar-placeholder-cfg"
+    fetch('cfg_barra.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('sidebar-cfg').innerHTML = data;
+        // Se houver script específico para cfg_barra.html, pode ser adicionado aqui
+        // Exemplo:
+        // var scriptCfg = document.createElement('script');
+        // scriptCfg.src = '../js/script-cfg.js';
+        // document.body.appendChild(scriptCfg);
+      })
+      .catch(error => console.error('Erro ao carregar cfg_barra.html:', error));
+  </script>
+  
+  <script>
+    // Carrega o arquivo sidebar_chat.html na div "sidebar-placeholder-chat"
+    fetch('sidebar_chat.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('sidebar-principal').innerHTML = data;
+        // Carrega o script associado à sidebar de chat
+        var scriptChat = document.createElement('script');
+        scriptChat.src = '../js/barra.js';
+        document.body.appendChild(scriptChat);
+      })
+      .catch(error => console.error('Erro ao carregar sidebar_chat.html:', error));
+  </script>
+</body>
+</html>

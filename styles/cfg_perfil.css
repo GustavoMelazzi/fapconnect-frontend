@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    z-index: 2;
+  }
+
+
+
+.perfil-configuracoes {
+    flex: 1;
+    height: 100%;
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+    margin-left: 22%;
+    width: 50%;
+  }
+  
+  .perfil-cfg h1 {
+    font-size: 32px;
+    margin-top: 80px;
+    margin-left: 300px;
+  }
+  
+  .perfil-configuracoes ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .perfil-configuracoes li {
+    margin-bottom: 15px;
+  }
+  
+  .perfil-configuracoes label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .perfil-configuracoes input,
+  .perfil-configuracoes select {
+    width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Botões */
+  .botoes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-left: 300px;
+    
+  }
+  
+  .perfil-cancelar button,
+  .perfil-salvar button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .perfil-cancelar button {
+    background-color: #fff;
+    color: #000;
+    
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .perfil-salvar button {
+    background-color: #007BFF;
+    color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .perfil-foto {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Perfil Foto */
+  .perfil-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    display: inline-block;
+    margin-top: -100px;
+    margin-left: 1000px;
+  }
+  
+  .perfil-foto-fundo {
+    position: absolute;
+    top: 52px;
+    margin-left: 995px;
+    width: 160px; /* Ajuste o tamanho do fundo conforme necessário */
+    height: 160px;
+    background-color: #59bde5; /* Cor de fundo */
+    border-radius: 50%;
+    z-index: 0; /* Coloca o fundo atrás da imagem */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .edit-foto{
+    position: absolute;
+    
+    right: 10;
+    background-color: #b073d9;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-left: 1090px;
+    margin-top: -35px;
+    
+  
+  }
+  
+  .edit-foto i{
+    color: white;
+  }
+  
+  .edit-foto:hover{
+    background-color: #736cc1;
+    transition: 0.3s;
+    width: 42px;
+    height: 42px;
+    font-size: 27px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  form label {
+    margin: 10px 0 5px;
+    font-size: 14px;
+    margin-left: 300px;
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"] {
+    outline: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 40%;
+    margin-left: 300px;
+  }
+  
+  
+  
+  /* Novo CSS para alinhar "Nome Completo" e "Nome de Usuário" lado a lado */
+  .nome-usuario-container {
+    display: flex;
+    gap: 0px; /* Controla o espaçamento entre os campos */
+    margin-bottom: 0px;
+    justify-content: space-between; /* Garante que os campos fiquem bem distribuídos */
+    width: 40%; /* Ajuste conforme necessário */
+    white-space: nowrap;
+  }
+  
+  .nome-usuario-container .input-group {
+    display: flex;
+    flex-direction: column;
+    width: 47%; /* Mantém os inputs com largura ajustável */
+  }
+  
+  .nome-usuario-container .input-group input {
+    width: 100%; /* Mantém o tamanho uniforme */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-left: 300px; /* Remove o deslocamento lateral */
+    z-index: 4;
+    
+  }
+    
+  .numero-curso-container {
+    display: flex;
+    gap: 0px; /* Controla o espaçamento entre os campos */
+    margin-bottom: 0px;
+    justify-content: space-between; /* Garante que os campos fiquem bem distribuídos */
+    width: 40%; /* Ajuste conforme necessário */
+    white-space: nowrap;
+  }
+    
+  .numero-curso-container .input-group {
+    display: flex;
+    flex-direction: column;
+    width: 47%; /* Mantém os inputs com largura ajustável */
+  }
+    
+  .numero-curso-container .input-group input {
+    width: 100%; /* Mantém o tamanho uniforme */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-left: 300px; /* Remove o deslocamento lateral */
+    z-index: 4;
+      
+  }
+
+  .genero-data-container {
+    display: flex;
+    gap: 0px; /* Controla o espaçamento entre os campos */
+    margin-bottom: 0px;
+    justify-content: space-between; /* Garante que os campos fiquem bem distribuídos */
+    width: 40%; /* Ajuste conforme necessário */
+    white-space: nowrap;
+  }
+    
+  .genero-data-container  .input-group {
+    display: flex;
+    flex-direction: column;
+    width: 47%; /* Mantém os inputs com largura ajustável */
+  }
+    
+  .genero-data-container  .input-group input {
+    width: 100%; /* Mantém o tamanho uniforme */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-left: 300px; /* Remove o deslocamento lateral */
+    z-index: 4;
+      
+  }
+  #genero {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('caminho/para/seta-para-baixo.png') no-repeat center right 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 11.3px;
+    font-size: 16px;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+    margin-left: 300px;
+    z-index: 4;
+  }

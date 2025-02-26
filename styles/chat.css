@@ -1,0 +1,321 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  
+  
+}
+
+#chatContainer {
+  position: fixed;
+  right: -350px; /* Mantém o chat fora da tela inicialmente */
+  top: 110%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: auto;
+  max-height: 400px;
+  transition: 0.5s; /* Transição suave */
+  z-index: 5;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+#chatContainer.active {
+  right: 262px; /* Move o chat para dentro da tela */
+  
+}
+
+body {
+  height: 100vh;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  
+}
+
+.chat-app {
+  display: flex;
+  height: 50vh;
+  width: 30vw; /* Ocupa metade da largura da tela */
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 12px 0px 0px 12px;
+  margin-top: -600px;
+  border-width: 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contacts {
+  width: 40%;
+  background-color: #11101d;
+  color: #fff;
+  overflow: hidden; /* Mantém o scroll apenas se necessário */
+  padding: 0px;
+  transition: 0.5s;
+  border-radius: 12px 0px 0px 12px;
+  max-height: 100%; /* Limita a altura da área de contatos */
+  display: flex;
+  flex-direction: column; /* Organiza os elementos verticalmente */
+  
+  
+  
+}
+
+.contact {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  align-items: center; /* Alinha a imagem e o nome verticalmente */
+  padding: 10px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  background-color: #11101d;
+  transition: all 0.4s ease;
+  object-fit: cover;
+  
+}
+
+.contact:hover,
+.contact.active {
+  background: #1d1b31;
+}
+
+.contact:hover span,
+.contact.active span {
+  color: #11101d !important; /* Força a cor do texto a mudar */
+}
+
+/* Área do chat */
+.chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+/* Estilizando a área de mensagens */
+#chatMessages {
+  max-height: 400px; /* Defina a altura máxima conforme necessário */
+  overflow-y: scroll; /* Habilita a rolagem vertical */
+  padding-right: 8px; /* Espaçamento para a barra de rolagem não sobrepor o conteúdo */
+  overflow-x: hidden; /* Impede a rolagem horizontal */
+}
+
+/* Estilizando a barra de rolagem (para o Chrome, Safari e Edge) */
+#chatMessages::-webkit-scrollbar {
+  width: 6px; /* Largura da barra de rolagem */
+}
+
+#chatMessages::-webkit-scrollbar-track {
+  background: transparent; /* Tornar o fundo da área de rolagem invisível */
+}
+
+#chatMessages::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2); /* Cor da parte deslizante da barra de rolagem */
+  border-radius: 10px; /* Arredonda os cantos da barra de rolagem */
+  transition: background-color 0.2s; /* Transição suave para a cor */
+}
+
+#chatMessages::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4); /* Cor mais escura quando o mouse passa sobre a barra */
+}
+
+/* Para Firefox */
+#chatMessages {
+  scrollbar-width: thin; /* Barra de rolagem mais fina */
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent; /* Cor da parte deslizante e do fundo */
+}
+
+#chatMessages:hover {
+  scrollbar-color: rgba(0, 0, 0, 0.4) transparent; /* Cor mais escura ao passar o mouse sobre a área */
+}
+
+/* Esconde as setas da barra de rolagem nos navegadores Webkit (Chrome, Safari, Edge) */
+#chatMessages::-webkit-scrollbar-button {
+  display: none !important; /* Usando !important para forçar a remoção */
+}
+
+/* Cabeçalho do chat */
+.chat-header {
+  background-color: #11101d;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+  transition: 0.4s;
+  
+}
+
+/* Área de mensagens */
+.chat-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background-color: #e5ddd5;
+  width: 336px;
+}
+
+/* Estilo das mensagens */
+.message {
+  margin-bottom: 10px;
+  display: block;
+  width: auto;
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 8px;
+  clear: both;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  transition: 0.4s;
+}
+
+.message.sent {
+  background-color: #dcf8c6;
+  margin-left: auto;
+}
+
+.message.received {
+  background-color: #fff;
+  margin-right: auto;
+}
+
+.message {
+  position: relative;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.message .timestamp {
+  font-size: 12px;
+  color: gray;
+  display: block;
+  text-align: right;
+  margin-top: 5px;
+}
+
+/* Área de input */
+.chat-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  outline: none;
+}
+
+.chat-input button {
+  background-color: #1d1b31;
+  border-width: 1px;
+  color: #fff;
+  padding: 0 10px;
+  margin-left: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+  border-color: #1d1b31;
+}
+
+.chat-input button:hover {
+  background-color: #fff;
+  color: #1d1b31;
+}
+
+.contacts .chat-header {
+  background-color: #11101d;
+  text-align: left;
+  font-size: 22px;
+  margin-left: 15px;
+}
+
+ul li.item-menu-chat a input {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.contacts ul li input {
+  position: absolute;
+  margin-top: 0px;
+  height: 100%;
+  width: 200px;
+  left: 0;
+  top: 0;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  background: #1d1b31;
+  padding-left: 50px;
+  font-size: 13px;
+  color: #fff;
+  
+}
+
+ul li.item-menu-pesquisar-chat a {
+  display: flex;
+  position: relative;
+  font-size: 17px;
+  padding: 0%;
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 15px;
+  line-height: 50px;
+  border-radius: 12px;
+  margin-left: -78px;
+  white-space: nowrap;
+  transition: all .4s ease;
+}
+
+ul li.item-menu-pesquisar-chat a input {
+  position: relative;
+  display: inline-block;
+  height: 40px; /* ou block, conforme a necessidade do layout */
+}
+
+.contacts ul li .icon-pesquisa-chat {
+  color: rgb(255, 255, 255);
+  margin-left: -180px;
+  margin-top: 1px;
+  position: relative;
+  margin-top: -5px;
+}
+
+.contact img {
+  width: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+  height: 40px;
+  border-radius: 50%; /* Deixa a imagem redonda */
+  margin-right: 10px; /* Espaço entre a imagem e o nome */
+  object-fit: cover; /* Garante que a imagem seja exibida corretamente */
+}
+
+.contact span {
+  font-size: 16px;
+  color: white;
+  display: flex;
+  flex: 1;
+  align-items: center; /* Mantém o nome centralizado na altura da imagem */
+}
+
+.close-chat {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  left: 6px;
+  margin-top: -36px;
+  transition: 0.3s;
+}
+
+.close-chat:hover {
+  font-size: 21px;
+  transition: 0.5;
+}

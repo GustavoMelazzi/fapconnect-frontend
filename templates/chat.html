@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>FAP Connect</title>
+  <link rel="stylesheet" href="../styles/chat.css">
+
+  <link rel="icon" type="image/x-icon" href="../assete/fapconnect.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <div id="chatContainer">
+        <div class="chat-app">
+          <!-- Sidebar de contatos -->
+          <div class="contacts">
+            <div class="chat-header">
+              <h3>Chat</h3>
+              <button id="closeChatBtn" class="close-chat"><i><i class="bi bi-chevron-right"></i></i></button>
+            </div>
+            
+            
+            <!-- Barra de pesquisa dentro do chat -->
+            <ul>
+              <div class="item-menu-pesquisar-expandir-chat">
+              <li class="item-menu-pesquisar-chat">
+                <a href="#">
+                  <input type="text" id="searchInputChat" placeholder="Search">
+                  <span class="icon-pesquisa-chat"><i class="bi bi-search" id="item-menu-pesquisar-exp"></i></span>
+                </a>
+              </li>
+              </div> 
+            
+              <div class="contact" data-contact="kayky">
+                <img src="../assete/kayky.jpg" alt="Foto de Kayky">
+                <span>kayky</span>
+              </div>
+              
+              <div class="contact" data-contact="Vinicius">
+                <img src="../assete/vinicius.jpg" alt="Foto de Vinicius">
+                <span>Vinicius</span>
+              </div>
+              
+              <div class="contact" data-contact="Eduardo">
+                <img src="../assete/eduardo.jpg" alt="Foto de Eduardo">
+                <span>Eduardo</span>
+              </div>
+            </div>
+      
+          <!-- Área do chat -->
+          <div class="chat">
+            <div class="chat-header" id="chatHeader">kayky</div>
+            <div class="chat-messages" id="chatMessages">
+              <div class="message received"></div>
+              <div class="message sent"></div>
+            </div>
+            <div class="chat-input">
+              <input type="text" id="messageInput" placeholder="Write...">
+              <button id="sendBtn"><I><i class="bi bi-send-fill"></i></I></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+    <script src="../js/chat.js"></script>
+</body>
+</html>

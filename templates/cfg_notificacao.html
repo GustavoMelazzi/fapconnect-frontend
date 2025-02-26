@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>FAP Connect</title>
+  <link rel="stylesheet" href="../styles/cfg_notificacao.css">
+  <link rel="icon" type="image/x-icon" href="../assete/fapconnect.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <div class="notificacoes-cfg">
+    <div class="not-cfg">
+        <h1>Notifications</h1>
+    
+        <div class="notification">
+            <div class="info">
+              <div class="title">Novo seguidor</div>
+              <div class="desc">Ative para ser notificado quando alguém começar a seguir seu perfil.</div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="novoSeguidor">
+              <span class="slider"></span>
+            </label>
+          </div>
+          
+          <div class="notification">
+            <div class="info">
+              <div class="title">Curtidas em publicações</div>
+              <div class="desc">Receba alertas quando alguém curtir suas fotos, artigos ou posts.</div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="curtidas">
+              <span class="slider"></span>
+            </label>
+          </div>
+          
+          <div class="notification">
+            <div class="info">
+              <div class="title">Comentários</div>
+              <div class="desc">Notificações para avisar quando alguém comentar em suas publicações.</div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="comentarios">
+              <span class="slider"></span>
+            </label>
+          </div>
+          
+          <div class="notification">
+            <div class="info">
+              <div class="title">Compartilhamentos</div>
+              <div class="desc">Receba um alerta quando suas postagens forem compartilhadas.</div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="compartilhamentos">
+              <span class="slider"></span>
+            </label>
+          </div>
+          
+          <div class="notification">
+            <div class="info">
+              <div class="title">Menções</div>
+              <div class="desc">Seja notificado quando for citado em uma postagem, comentário ou artigo.</div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="mencoes">
+              <span class="slider"></span>
+            </label>
+          </div>
+          
+          <div class="notification">
+            <div class="info">
+              <div class="title">Novas publicações de amigos/contas seguidas</div>
+              <div class="desc">Ative para ficar por dentro quando amigos ou perfis que você segue publicarem algo novo.</div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="novasPublicacoes">
+              <span class="slider"></span>
+            </label>
+          </div>
+          
+          <div class="notification">
+            <div class="info">
+              <div class="title">Atualizações na página de estudos</div>
+              <div class="desc">Receba notificações sobre novos artigos ou atualizações em conteúdos educativos.</div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="atualizacoesEstudos">
+              <span class="slider"></span>
+            </label>
+          </div>
+          
+          <div class="notification">
+            <div class="info">
+              <div class="title">Chat – novas mensagens</div>
+              <div class="desc">Receba notificações de novas mensagens, seja em conversas individuais ou em grupos.</div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="chatMensagens">
+              <span class="slider"></span>
+            </label>
+          </div>
+          
+          <div class="notification">
+            <div class="info">
+              <div class="title">Convites para chat/grupos</div>
+              <div class="desc">Receba avisos quando alguém te convidar para participar de uma conversa em grupo.</div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="chatConvites">
+              <span class="slider"></span>
+            </label>
+          </div>
+          
+          <div class="notification">
+            <div class="info">
+              <div class="title">Respostas ou reações em chats</div>
+              <div class="desc">Receba notificações quando houver respostas diretas ou reações às suas mensagens no chat.</div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="chatRespostas">
+              <span class="slider"></span>
+            </label>
+          </div>
+    </div>
+    </div>
+
+    
+          
+
+
+
+<div id="sidebar-cfg"></div>
+<div id="sidebar-principal"></div>
+
+  <script>
+    // Carrega o arquivo cfg_barra.html na div "sidebar-placeholder-cfg"
+    fetch('cfg_barra.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('sidebar-cfg').innerHTML = data;
+        // Se houver script específico para cfg_barra.html, pode ser adicionado aqui
+        // Exemplo:
+        // var scriptCfg = document.createElement('script');
+        // scriptCfg.src = '../js/script-cfg.js';
+        // document.body.appendChild(scriptCfg);
+      })
+      .catch(error => console.error('Erro ao carregar cfg_barra.html:', error));
+  </script>
+  
+  <script>
+    // Carrega o arquivo sidebar_chat.html na div "sidebar-placeholder-chat"
+    fetch('sidebar_chat.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('sidebar-principal').innerHTML = data;
+        // Carrega o script associado à sidebar de chat
+        var scriptChat = document.createElement('script');
+        scriptChat.src = '../js/barra.js';
+        document.body.appendChild(scriptChat);
+      })
+      .catch(error => console.error('Erro ao carregar sidebar_chat.html:', error));
+  </script>
+  
+  
+  
+
+    
+</body>
+</html>

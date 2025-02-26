@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>FAP Connect</title>
+  <link rel="stylesheet" href="../styles/sidebar.css">
+  <link rel="stylesheet" href="../styles/chat.css">
+
+  <link rel="icon" type="image/x-icon" href="../assete/fapconnect.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+ 
+  <!-- Container principal que engloba a sidebar e a área de conteúdo -->
+  
+  <nav class="menu-lateral">
+    <div class="btn-expandir">
+        <i class="bi bi-list" id="btn-exp"></i>
+    </div>
+      <span class="txt-link-fap">FAP connect</span>
+      <ul>
+        <div class="item-menu-pesquisar-expandir">
+        <li class="item-menu-pesquisar">
+          <a href="#">
+            <input type="text"placeholder="Search">
+            <span class="icon-pesquisa"><i class="bi bi-search" id="item-menu-pesquisar-exp"></i></span>
+          </a>
+        </li>
+        </div>      
+        </li>
+          <li class="item-menu">
+          <a href="../templates/feed.html">
+            <span class="icon"><i class="bi bi-house-door"></i></span>
+            <span class="txt-link">Home</span>
+          </a>
+          </li>
+        <li class="item-menu">
+          <a href="../templates/estudos.html">
+            <span class="icon"><i class="bi bi-book"></i></span>
+            <span class="txt-link">Academy</span>
+          </a>
+          </li>
+          <li class="item-menu">
+            <a href="#" id="menuChat"> <!-- ID para abrir/fechar o chat -->
+              <span class="icon"><i class="bi bi-chat"></i></span>
+              <span class="txt-link">Chat</span>
+            </a>
+          </li>
+        <li class="item-menu">
+          <a href="../templates/perfil.html">
+            <span class="icon"><i class="bi bi-person-circle"></i></span>
+            <span class="txt-link">Profile</span>
+          </a>
+          </li>
+    
+        <li class="item-menu">
+          <a href="cfg_perfil.html">
+            <span class="icon"><i class="bi bi-gear-wide-connected"></i></span>
+            <span class="txt-link">Settings</span>
+          </a>
+          </li>
+        <li class="item-menu">
+          <a href ="#">
+            <span class="icon"><i class="bi bi-info-circle"></i></span>
+            <span class="txt-link">Support</span>
+          </a>
+          </li>
+        <li class="item-menu">
+          <a href="#">
+            <span class="icon"><i class="bi bi-chat-right-quote"></i></span>
+            <span class="txt-link">Feedback</span>
+          </a>
+          </li>
+      </ul> 
+      <div class="profile_content">
+        <div class="profile">
+          <div class="profile_details">
+            <img src="../assete/gustavo.jpg" class="imagem-perfil" alt="">
+            <div class="name_job">
+              <div class="txt-link-perfil">Gustavo Melazzi</div>
+              <div class="txt-link-perfil">Web Designer</div>
+            </div>
+          </div>
+          <div class="log_out">
+              <a href="../templates/login.html">
+                <i><i class="bi bi-box-arrow-left"></i></i>
+              </a>
+          </div>
+        </div>
+      </div>
+  </nav>
+
+  <div class="overlay"></div>
+  <script src="../js/barra.js"></script>
+  
+  <!-- Container do chat (oculto inicialmente) -->
+  <!-- Container do chat (oculto inicialmente) -->
+<!-- Container do chat -->
+<div id="chatContainer">
+  <div class="chat-app">
+    <!-- Sidebar de contatos -->
+    <div class="contacts">
+      <div class="chat-header">
+        <h3>Chat</h3>
+        <button id="closeChatBtn" class="close-chat"><i><i class="bi bi-chevron-right"></i></i></button>
+      </div>
+      
+      
+      <!-- Barra de pesquisa dentro do chat -->
+      <ul>
+        <div class="item-menu-pesquisar-expandir-chat">
+        <li class="item-menu-pesquisar-chat">
+          <a href="#">
+            <input type="text" id="searchInputChat" placeholder="Search">
+            <span class="icon-pesquisa-chat"><i class="bi bi-search" id="item-menu-pesquisar-exp"></i></span>
+          </a>
+        </li>
+        </div> 
+      
+        <div class="contact" data-contact="kayky">
+          <img src="../assete/kayky.jpg" alt="Foto de Kayky">
+          <span>kayky</span>
+        </div>
+        
+        <div class="contact" data-contact="Vinicius">
+          <img src="../assete/vinicius.jpg" alt="Foto de Vinicius">
+          <span>Vinicius</span>
+        </div>
+        
+        <div class="contact" data-contact="Eduardo">
+          <img src="../assete/eduardo.jpg" alt="Foto de Eduardo">
+          <span>Eduardo</span>
+        </div>
+      </div>
+
+    <!-- Área do chat -->
+    <div class="chat">
+      <div class="chat-header" id="chatHeader">kayky</div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="message received"></div>
+        <div class="message sent"></div>
+      </div>
+      <div class="chat-input">
+        <input type="text" id="messageInput" placeholder="Write...">
+        <button id="sendBtn"><I><i class="bi bi-send-fill"></i></I></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="../js/chat.js"></script>
+</body>
+</html>

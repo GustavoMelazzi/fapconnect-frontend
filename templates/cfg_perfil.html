@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>FAP Connect</title>
+  <link rel="stylesheet" href="../styles/cfg_perfil.css">
+  <link rel="icon" type="image/x-icon" href="../assete/fapconnect.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    
+  <div class="perfil-configuracoes">
+      <div class="perfil-cfg">
+        <h1>Edit Profile</h1>
+        <div class="perfil-foto-fundo">
+          
+      </div>
+        <div class="perfil-foto">
+            <img src="../assete/gustavo.jpg" class="perfil-img">
+        </div>
+        <li class="edit-foto">
+          <a href="#">
+            <span class="icon"><i class="bi bi-pen"></i></span>
+          </a>
+        </li>
+        
+        <form action="processa_registro.php" method="POST">
+          <!-- Container para alinhar os campos lado a lado -->
+          <div class="nome-usuario-container">
+            <div class="input-group">
+              <label for="nome">Full name</label>
+              <input type="text" id="nome" name="nome" placeholder="Full name">
+            </div>
+            <div class="input-group">
+              <label for="usuario">Username</label>
+              <input type="text" id="usuario" name="usuario" placeholder="Username">
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email" placeholder="Email"> 
+          </div>
+          <div class="numero-curso-container">
+            <div class="input-group">
+              <label for="number">number</label>
+              <input type="text" id="number" name="number" placeholder="(96) 00000-0000" maxlength="15"> 
+            </div>
+            <div class="input-group">
+              <label for="curso">Course</label>
+              <input type="text" id="curso" name="curso" placeholder="Course">
+              </div>
+          </div>
+          <div class="genero-data-container"> 
+            <div class="input-group">
+              <label for="genero">Gênero</label>
+              <select id="genero" name="genero">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="data_nascimento">Data de Nascimento</label>
+              <input type="date" id="data_nascimen" name="data_nascimento">
+            </div>
+          </div>
+          <div class="botoes">
+            <div class="perfil-cancelar">
+              <button type="button">Cancel</button>
+            </div>
+            <div class="perfil-salvar">
+              <button type="submit">Save</button>
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+    
+  <div id="sidebar-cfg"></div>
+  <div id="sidebar-principal"></div>
+
+  <script>
+    // Carrega o arquivo cfg_barra.html na div "sidebar-placeholder-cfg"
+    fetch('cfg_barra.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('sidebar-cfg').innerHTML = data;
+        // Se houver script específico para cfg_barra.html, pode ser adicionado aqui
+        // Exemplo:
+        // var scriptCfg = document.createElement('script');
+        // scriptCfg.src = '../js/script-cfg.js';
+        // document.body.appendChild(scriptCfg);
+      })
+      .catch(error => console.error('Erro ao carregar cfg_barra.html:', error));
+  </script>
+  
+  <script>
+    // Carrega o arquivo sidebar_chat.html na div "sidebar-placeholder-chat"
+    fetch('sidebar_chat.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('sidebar-principal').innerHTML = data;
+        // Carrega o script associado à sidebar de chat
+        var scriptChat = document.createElement('script');
+        scriptChat.src = '../js/barra.js';
+        document.body.appendChild(scriptChat);
+      })
+      .catch(error => console.error('Erro ao carregar sidebar_chat.html:', error));
+  </script>
+  
+  <script src="../js/numero.js"></script>
+  
+
+    
+</body>
+</html>

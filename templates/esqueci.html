@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>FAP Connect</title>
+  <link rel="stylesheet" href="../styles/esqueci.css">
+  <link rel="icon" type="image/x-icon" href="../assete/fapconnect.ico">
+
+</head>
+<body>
+  <div class="fundo_imagem">
+    <img src="../assete/fundo.jpg" class="fundo-cadastro" alt="">
+  </div>
+  <div class="container-esqueci">
+    <h2>Recuperação de Senha</h2>
+    <p>Digite o e-mail vinculado à sua conta e enviaremos um link para redefinir sua senha.</p>
+    <!-- O atributo "action" deve apontar para o script que processará o envio do e-mail -->
+    <form action="process_recovery.php" method="POST">
+      <div class="input-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="e-mail" required>
+      </div>
+      <button type="submit">Confirmar</button>
+    </form>
+    <div class="back-link">
+      <a href="../templates/login.html">Voltar ao Login</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+/* Reset de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .fundo-cadastro{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    height: 1080px;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+    color: #333;
+    
+  }
+  
+  .container_cadastro {
+    max-width: 500px;
+    width: 350px;
+    padding: 25px;
+    background: #fff;
+    border: 1px solid #ccc;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    
+  }
+
+  .fap_cadastro {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin-left: 90px;
+    text-align: center;
+  }
+
+  
+
+  .cadastre-se{
+    max-width: 370px;
+    padding: 25px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #ccc;
+  }
+
+  .cadastre-se a{
+    color: #007BFF;
+    text-decoration: none;
+    
+  }
+
+  
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    margin: 10px 0 5px;
+    font-size: 14px;
+    
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"] {
+    outline: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+  }
+  
+  form button {
+    margin-top: 20px;
+    padding: 10px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  form button:hover {
+    background: #0056b3;
+  }
+  
+  .login-link {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .login-link a {
+    color: #007AFF;
+    text-decoration: none;
+  }
+  
+  .login-link a:hover {
+    text-decoration: none;
+  }
+  

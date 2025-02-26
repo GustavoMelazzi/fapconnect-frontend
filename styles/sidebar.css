@@ -1,0 +1,305 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+nav.menu-lateral{
+  width: 67px;
+  max-width: 250px;
+  height: 100%;
+  background-color: #11101d;
+  padding: 40px 0 40px 1%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 10;
+  display: flex; /* Adicionado */
+  flex-direction: column; /* Adicionado */
+  align-items: flex-start;
+  
+} 
+nav.menu-lateral.expandir{
+  width: 240px;
+}
+
+
+
+.btn-expandir{
+  width: 100%;
+  height: 7%;
+  padding-left: 10px;
+  margin-top: -20px;
+}
+
+.btn-expandir > i{
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  margin-left: -10px;
+}
+
+
+/* Menu da sidebar */
+ul {
+  height: 100%;
+  list-style-type: none;
+}
+
+ul li.item-menu a{
+  display: flex;
+  position: relative;
+  font-size: 17px;
+  padding: 0%;
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 15px;
+  line-height: 50px;
+  border-radius: 12px;
+  width: 212px;
+  margin-left: -7px;
+  white-space: nowrap;
+  transition: all .4s ease;
+}
+
+
+
+nav.menu-lateral .profile_content{
+  position: absolute;
+  color: #fff;
+  bottom: 0;
+  left: 0;
+  
+}
+
+nav.menu-lateral .profile_content .profile{
+  position: relative;
+  padding: 0px 10px;
+  height: 70px;
+  max-width: 240px;
+  width: 240px;
+  background: #1d1b31;
+}
+
+.profile_content .profile .profile_details{
+  display: flex;
+  align-items: center;
+  
+}
+
+  .profile .profile_details img{
+  width: 39px;
+  height: 50px;
+  border-radius: 7px;
+  margin-left: 2px;
+  margin-top: 10px;
+  position: relative;
+  object-fit: cover;
+  
+  }
+  
+  nav.menu-lateral .txt-link-fap{
+    margin-left: 110px;
+    white-space: nowrap;
+    transition: 0.5s;
+    color: #fff;
+    font-size: 25px;
+    margin-top: -55px;
+    
+    
+  }
+  
+  nav.menu-lateral.expandir .txt-link-fap{
+    margin-left: 60px;
+    font-size: 25px;
+    
+    
+  }
+
+  nav.menu-lateral .txt-link-perfil{
+  margin-left: 80px;
+  white-space: nowrap;
+  margin-top: 10px;
+  transition: 0.5s;
+}
+
+nav.menu-lateral.expandir .txt-link-perfil{
+  
+  margin-left: -50px;
+}
+
+ul li.item-menu a .txt-link{
+  margin-left: 100px;
+  transition: 0.5s;
+  padding: 0px;
+}
+
+nav.menu-lateral.expandir .txt-link{
+  margin-left: 40px;
+  transition: 0.5s;
+}
+
+.profile .profile_details .name_job{
+  margin-left: 70px;
+  transition: 0.5s;
+  
+}
+
+.log_out a{
+  position: absolute;
+  width: 35px;
+  height: 50px;
+  left: 90%;
+  top: 15%;
+  bottom: 5px;
+  transform: translateX(-50%);
+  min-width: 10px;
+  line-height: 50px;
+  font-size: 20px;
+  border-radius: 12px;
+  color: #fff;
+  overflow: hidden;
+  text-align: center;
+  
+
+}
+.log_out a:hover{
+  background: #fff;
+  color: #11101d;
+  transition: .4s;
+}
+
+ul li.item-menu a input{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+
+nav.menu-lateral ul li input{
+  position: absolute;
+  margin-top: 25px;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  background: #1d1b31;
+  padding-left: 50px;
+  font-size: 18px;
+  color: #fff;
+  
+}
+
+nav.menu-lateral.expandir ul li input{
+  margin-left: 0px;
+  transition: 0.5s;
+}
+
+ul li input{
+  margin-left: 90px;
+  transition: 0.5s;
+  padding: 0px;
+}
+
+
+ul li.item-menu a .icon > i{
+  
+  margin-left:10px;
+  font-size: 22px;
+  text-align: center;
+}
+
+ul li.item-menu a:hover{
+  background: #fff;
+  color: #11101d;
+  transition: .4s;
+}
+
+
+ul li.item-menu-pesquisar a{
+  display: flex;
+  position: relative;
+  font-size: 17px;
+  padding: 0%;
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 15px;
+  line-height: 50px;
+  border-radius: 12px;
+  width: 212px;
+  margin-left: -7px;
+  white-space: nowrap;
+  transition: all .4s ease;
+}
+ul li.item-menu-pesquisar a input {
+  position: relative;
+  display: inline-block;
+  height: 50px; /* ou block, conforme a necessidade do layout */
+}
+
+ul li.item-menu-pesquisar a .icon-pesquisa > i{
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  /* Certifique-se que o ícone esteja como inline-block, se necessário */
+  display: inline-block;
+  font-size: 22px; /* ajuste conforme seu design */
+  color: #ffffff;
+  margin-top: 12px;
+  width: 40px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+ul li.item-menu-pesquisar a .icon-pesquisa > i:hover{
+  background-color: #fff;
+  color: #11101d;
+}
+
+.ul li.item-menu-pesquisar a input {
+  padding-left: 35px; /* espaço suficiente para o ícone */
+  height: 30px; /* ou outro valor que se adeque ao seu layout */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* cor preta com 50% de transparência */
+  opacity: 0;
+  pointer-events: none; /* não interfere nos cliques quando inativo */
+  transition: opacity 0.3s ease;
+  z-index: 5; /* ajuste conforme a estrutura da sua página */
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto; /* passa a capturar os cliques quando ativo */
+}
+
+.home_content{
+  position: absolute;
+  height: 100%;
+  width: calc(100% - 240px);
+  left: 240px;
+}
+
+.home_content .text{
+  font-size: 25px;
+  font-weight: 500;
+  color: #1d1b31;
+  margin: 12px;
+}

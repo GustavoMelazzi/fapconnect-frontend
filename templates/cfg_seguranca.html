@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAP Connec</title>
+  <link rel="stylesheet" href="../styles/cfg_seguranca.css">
+  <link rel="icon" type="image/x-icon" href="../assete/fapconnect.ico">
+
+
+</head>
+<body>
+  <div class="setting-cfg">
+    <h1>Segurança</h1>
+    <!-- Seção de Proteção de Conta -->
+    <div class="section">
+      <h2>Proteção de Conta</h2>
+      <!-- Autenticação em Dois Fatores -->
+      <div class="setting">
+        <div class="info">
+          <label class="text">Autenticação em Dois Fatores</label>
+          <div class="desc">Adicione uma camada extra de segurança exigindo um código ao fazer login.</div>
+          
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="twoFactor">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <!-- Alertas de Login -->
+      <div class="setting">
+        <div class="info">
+          <label class="text">Alertas de Login</label>
+          <div class="desc">Receba notificações quando um novo dispositivo acessar sua conta.</div>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="loginAlerts">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <!-- Atividade Suspeita -->
+      <div class="setting">
+        <div class="info">
+          <label class="text">Atividade Suspeita</label>
+          <div class="desc">Notifique sobre atividades incomuns ou suspeitas na sua conta.</div>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="suspiciousActivity">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    <!-- Seção de Gerenciamento de Conta -->
+    <div class="section">
+      <h2>Gerenciamento de Conta</h2>
+      <!-- Gerenciar Dispositivos Conectados -->
+      <div class="setting">
+        <div class="info">
+          <label class="text">Dispositivos Conectados</label>
+          <div class="desc">Visualize e remova dispositivos que acessaram sua conta recentemente.</div>
+        </div>
+        <button class="button" onclick="alert('Redirecionando para gerenciamento de dispositivos')">Gerenciar</button>
+      </div>
+      <!-- Alterar Senha -->
+      <div class="setting">
+        <div class="info">
+          <label class="text">Alterar Senha</label>
+          <div class="desc">Atualize sua senha regularmente para manter sua conta segura.</div>
+        </div>
+        <button class="button" onclick="alert('Redirecionando para alteração de senha')">Alterar</button>
+      </div>
+      <!-- Recuperação de Conta -->
+      <div class="setting">
+        <div class="info">
+          <label class="text">Recuperação de Conta</label>
+          <div class="desc">Configure um email ou número para recuperar sua conta, se necessário.</div>
+        </div>
+        <button class="button" onclick="alert('Redirecionando para configurações de recuperação')">Configurar</button>
+      </div>
+      <!-- Perguntas de Segurança -->
+      <div class="setting">
+        <div class="info">
+          <label class="text">Perguntas de Segurança</label>
+          <div class="desc">Defina perguntas para ajudar na recuperação da conta.</div>
+        </div>
+        <button class="button" onclick="alert('Redirecionando para configuração de perguntas de segurança')">Configurar</button>
+      </div>
+    </div>
+    <!-- Seção de Conexões e Privacidade -->
+    <div class="section">
+      <h2>Conexões e Privacidade</h2>
+      <!-- Aplicativos Conectados -->
+      <div class="setting">
+        <div class="info">
+          <label class="text">Aplicativos Conectados</label>
+          <div class="desc">Revise e remova aplicativos com acesso à sua conta.</div>
+        </div>
+        <button class="button" onclick="alert('Redirecionando para gerenciamento de aplicativos')">Gerenciar</button>
+      </div>
+      <!-- Verificação de Identidade -->
+      <div class="setting">
+        <div class="info">
+          <label class="text">Verificação de Identidade</label>
+          <div class="desc">Envie documentos para aumentar a segurança da sua conta.</div>
+        </div>
+        <button class="button" onclick="alert('Redirecionando para verificação de identidade')">Verificar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="sidebar-cfg"></div>
+<div id="sidebar-principal"></div>
+
+  <script>
+    // Carrega o arquivo cfg_barra.html na div "sidebar-placeholder-cfg"
+    fetch('cfg_barra.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('sidebar-cfg').innerHTML = data;
+        // Se houver script específico para cfg_barra.html, pode ser adicionado aqui
+        // Exemplo:
+        // var scriptCfg = document.createElement('script');
+        // scriptCfg.src = '../js/script-cfg.js';
+        // document.body.appendChild(scriptCfg);
+      })
+      .catch(error => console.error('Erro ao carregar cfg_barra.html:', error));
+  </script>
+  
+  <script>
+    // Carrega o arquivo sidebar_chat.html na div "sidebar-placeholder-chat"
+    fetch('sidebar_chat.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('sidebar-principal').innerHTML = data;
+        // Carrega o script associado à sidebar de chat
+        var scriptChat = document.createElement('script');
+        scriptChat.src = '../js/barra.js';
+        document.body.appendChild(scriptChat);
+      })
+      .catch(error => console.error('Erro ao carregar sidebar_chat.html:', error));
+  </script>
+</body>
+</html>
