@@ -84,7 +84,7 @@ body {
 
 .contact:hover span,
 .contact.active span {
-  color: #11101d !important; /* Força a cor do texto a mudar */
+  color: #ffffff !important; /* Força a cor do texto a mudar */
 }
 
 /* Área do chat */

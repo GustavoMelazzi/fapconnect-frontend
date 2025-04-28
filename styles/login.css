@@ -6,6 +6,19 @@
     box-sizing: border-box;
     }
 
+.hidden {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+      /* Quando o elemento estiver pronto, removendo a classe hidden, a opacidade volta para 1 */
+      .visible {
+        opacity: 1;
+      }
+      /* Garante que a imagem não extrapole o tamanho do container */
+      .perfil-img {
+        max-width: 100%;
+        height: auto;
+      }
 .fundo-cadastro{
     position: fixed;
     top: 0;

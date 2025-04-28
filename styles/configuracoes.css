@@ -13,19 +13,20 @@ body {
 
 /* Menu lateral de configurações fixo */
 nav.menu-lateral-cfg {
-  width: 350px; /* Largura fixa */
+  width: 347px; /* Largura fixa */
   height: 100vh;
-  background-color: #ffffff;
+  background-color: #f2f2f26c;
   padding: 40px 0 40px 1%;
   position: fixed;
   top: 0;
   left: 67px;
   overflow: hidden;
-  
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   border: 1px solid #e4dfdf;
+  box-shadow: 15px 15px 30px #c0c0c06e;
+
   /* Removemos a transição de expandir, pois o menu é fixo */
 }
 
@@ -35,7 +36,7 @@ nav.menu-lateral-cfg .txt-link-cfg {
   color: #1d1b31;
   font-size: 40px;
   margin-top: 0px;
-  margin-left: 70px;
+  margin-left: 20px;
   
 }
 
@@ -48,21 +49,25 @@ nav.menu-lateral-cfg ul {
 }
 
 /* Itens do menu */
-nav.menu-lateral-cfg ul li.lateral-config a {
+nav.menu-lateral-cfg ul li.lateral-config a,
+nav.menu-lateral-cfg ul li.lateral-config-cima a,
+nav.menu-lateral-cfg ul li.lateral-config-baixo a {
   display: flex;
   align-items: center;
   font-size: 20px;
   padding: 0;
   text-decoration: none;
-  color: #888888;
-  margin-bottom: 5px;
+  color: #000000;
+  background-color: #ffffff;
+  margin-bottom: -15px;
   line-height: 50px;
-  border-radius: 8px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
   width: 300px;
   height: 70px;
   margin-left:-6px;
   margin-top: 14px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
+
   
 }
 
@@ -72,27 +77,61 @@ nav.menu-lateral-cfg ul li.lateral-config a:active {
 }
 
 /* Ícone dos itens */
-nav.menu-lateral-cfg ul li.lateral-config a .icon {
+nav.menu-lateral-cfg ul li.lateral-config a .icon,
+nav.menu-lateral-cfg ul li.lateral-config-cima a .icon,
+nav.menu-lateral-cfg ul li.lateral-config-baixo a .icon {
   display: inline-block;
   width: 40px;
   text-align: center;
   font-size: 22px;
   transition: all 0.2s ease;
+  margin-left: 10px;
 }
 
 /* Texto dos itens */
-nav.menu-lateral-cfg ul li.lateral-config a .txt-link {
+nav.menu-lateral-cfg ul li.lateral-config a .txt-link,
+nav.menu-lateral-cfg ul li.lateral-config-cima a .txt-link,
+nav.menu-lateral-cfg ul li.lateral-config-baixo a .txt-link {
   margin-left: 30px;
   transition: 0.2s;
 }
 
 /* Efeito hover nos itens do menu */
-nav.menu-lateral-cfg ul li.lateral-config a:hover {
-  background: #1d1b31;
+nav.menu-lateral-cfg ul li.lateral-config a:hover,
+nav.menu-lateral-cfg ul li.lateral-config-cima a:hover,
+nav.menu-lateral-cfg ul li.lateral-config-baixo a:hover {
+  background-color: #c0c0c0;
   color: #ffffff;
-  transition: 0.6s;
+  transition: 0.5s;
+  box-shadow: 0px 4px 10px f2f2f26c(85, 85, 85, 0.3);
+
 }
 
+nav.menu-lateral-cfg ul li.lateral-config-cima a {
+  border-radius: 10px 10px 0px 0px;
+}
 
+nav.menu-lateral-cfg ul li.lateral-config-baixo a {
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);  
+}
 
+nav.menu-lateral-cfg ul li.lateral-config a .icon-seta,
+nav.menu-lateral-cfg ul li.lateral-config-cima a .icon-seta,
+nav.menu-lateral-cfg ul li.lateral-config-baixo a .icon-seta {
 
+    margin-left: auto;
+    display: inline-block;
+    width: 40px;
+    font-size: 22px;
+    transition: all 0.2s ease;
+    color: #c9c9c9;
+  
+}
+
+nav.menu-lateral-cfg ul li.lateral-config a .icon-seta:hover,
+nav.menu-lateral-cfg ul li.lateral-config-cima a .icon-seta:hover,
+nav.menu-lateral-cfg ul li.lateral-config-baixo a .icon-seta:hover{
+  color: #ffffff;
+  
+}
